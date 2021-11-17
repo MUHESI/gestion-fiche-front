@@ -1,24 +1,61 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from "react";
+import Routes from "./Routes";
+import { useDispatch } from "react-redux";
+// import { getUser } from "./store/actions/user.actions";
+import keysUserContext from "./context/AppContext";
+import { refresToken } from "../src/store/actions/authActions";
 
 function App() {
+  // const dispatch = useDispatch();
+
+  const [Uid, setUid] = useState(null);
+  const [keysUser, setKeysUser] = useState({
+    Uid: "",
+    entite: "",
+    fonction: "",
+  });
+
+  useEffect(() => {
+    // dispatch(refresToken());
+  }, []);
+
+  // useEffect(() => {
+  //   const fetchToken = async () => {
+  //     await axios({
+  //       method: "get",
+  //       url: `${process.env.REACT_APP_API_URL}/jwtid`,
+  //       withCredentials: true,
+  //     })
+  //       .then((res) => {
+  //         setUid(res.data);
+  //         // console.log(res.data);
+
+  //         axios({
+  //           method: "get",
+  //           url: `${process.env.REACT_APP_API_URL}/api/user/${res.data}`,
+  //           withCredentials: true,
+  //         })
+  //           .then((res) => {
+  //             setKeysUser({
+  //               Uid,
+  //               entite: res.data.entite,
+  //               fonction: res.data.fonction,
+  //             });
+  //           })
+  //           .catch((err) => console.log("error", err.message));
+  //         //
+  //       })
+  //       .catch((err) => console.log("Non Token"));
+  //   };
+  //   fetchToken();
+  //   if (Uid) dispatch(getUser(Uid));
+  // }, [Uid]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <keysUserContext.Provider value={keysUser}>
+        <Routes />
+      </keysUserContext.Provider>
     </div>
   );
 }
