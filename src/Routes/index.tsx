@@ -100,7 +100,7 @@ export default function MiniDrawer() {
   const [login, selLogin] = useState(false);
   const [sidebar, selSidebar] = useState("");
 
-  const Uid = false;
+  const Uid = true;
   // useEffect(() => {
   //   selSidebar(<Sidebar sideOpen={open} />);
   // }, [open]);

@@ -31,8 +31,12 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+
+
+    "dev": "ts-node-dev server/index.ts",
+    "build": "npm run tsc -p",
+    "tsc" : "tsc",
+        "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
