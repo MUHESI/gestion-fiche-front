@@ -1,6 +1,5 @@
 {
   "name": "gestion-fiche-types",
-  "proxy": "https://gestion-fiche.herokuapp.com/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
