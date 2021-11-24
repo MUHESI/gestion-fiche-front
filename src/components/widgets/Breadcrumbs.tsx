@@ -4,7 +4,8 @@ import Link from "@material-ui/core/Link";
 import { withRouter } from "react-router-dom";
 
 const MyBreadcrumbs = ({ history, location: { pathname } }: any) => {
-  const pathnames = pathname.split("/").filter((x: string) => x);
+  // const pathnames = pathname.split("/").filter((x: string) => x);
+  const pathnames = pathname.split("/");
 
   return (
     <div className="mainBreadcrumb">
