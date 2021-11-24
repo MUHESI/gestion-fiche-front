@@ -31,10 +31,9 @@
   },
   "scripts": {
    "start": "react-scripts start",
-    "build": "npm run tsc -p",
+    "build": "npm run tsc build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "tsc" : "tsc"
+    "eject": "react-scripts eject"
 
   },
   "eslintConfig": {
