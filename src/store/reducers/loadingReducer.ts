@@ -7,7 +7,6 @@ const loadingReducer = (state: any = initialState.loading, action: any) => {
     case LOADING:
       loading = action.payload;
       console.log("loading :>> ", loading);
-
       return action.payload;
 
     default:
