@@ -100,10 +100,14 @@ export default function MiniDrawer() {
   const [login, selLogin] = useState(false);
   const [sidebar, selSidebar] = useState("");
 
-  const Uid = true;
+  // const Uid = true;
   // useEffect(() => {
   //   selSidebar(<Sidebar sideOpen={open} />);
   // }, [open]);
+  const [Uid, setUid] = useState(false)
+  const changeUid = () => setUid(true);
+  
+
   const [state, setState] = React.useState({
     left: false,
   });
@@ -172,7 +176,7 @@ export default function MiniDrawer() {
           </>
         ) : (
           <div>
-            <Login />
+            <Login btn={changeUid} />
           </div>
         )}
       </Router>

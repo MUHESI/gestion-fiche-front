@@ -5,7 +5,7 @@ import MailOutlineIcon from "@material-ui/icons/MailOutline";
 import LockIcon from "@material-ui/icons/Lock";
 import EmailIcon from "@material-ui/icons/Email";
 
-function Login() {
+function Login({ btn }: any) {
   return (
     <div
       className="mainLogin"
@@ -42,6 +42,7 @@ function Login() {
               textBtn="Contactez-nous"
               iconLeftBtn={<MailOutlineIcon />}
               iconRightBtn=""
+              
               styleBtn={"btnPrimary"}
             />
           </div>
@@ -82,6 +83,7 @@ function Login() {
               <Button
                 textBtn="Connexion"
                 display="block"
+                actionTo={btn}
                 styleBtn={"btnPrimary"}
               />
             </div>
